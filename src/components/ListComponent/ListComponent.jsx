@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import css from 'components/ListComponent/ListComponent.module.css';
 const ListComponent = ({ contacts, onDeleteContact }) => {
   return (
@@ -20,5 +21,8 @@ const ListComponent = ({ contacts, onDeleteContact }) => {
     </ul>
   );
 };
-
+ListComponent.propTypes = {
+  contacts: propTypes.arrayOf(propTypes.object),
+  onDeleteContact: propTypes.func,
+};
 export default ListComponent;
