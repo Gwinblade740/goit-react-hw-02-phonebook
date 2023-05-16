@@ -19,7 +19,7 @@ export default class App extends Component {
     ...INITIAL_STATE,
   };
   submitForm = ({ name, number }) => {
-    if (this.findContacts(name).length) {
+    if (this.findContackt(name).length) {
       Notiflix.Notify.failure(`${name} is already in contacts.`);
     } else {
       const id = nanoid();
